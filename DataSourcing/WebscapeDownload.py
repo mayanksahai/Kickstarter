@@ -8,7 +8,7 @@ import time
 def findLinks():
     cwd = os.getcwd()
     file_name_prefix = "kickstarter"
-    folder = cwd + "\\datasets\\"
+    folder = cwd + "\\zipFiles\\"
     resp = urllib.request.urlopen("https://webrobots.io/kickstarter-datasets/")
     soup = BeautifulSoup(resp, from_encoding=resp.info().get_param('charset'))
     hrefs = soup.find_all('a', href=True)
